@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef5d52f7-269e-46d0-877f-e304a66f2369" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/001TwoSum.py" afterPath="$PROJECT_DIR$/001TwoSum.py" />
       <change beforePath="$PROJECT_DIR$/1. Two Sum.ipynb" afterPath="$PROJECT_DIR$/1. Two Sum.ipynb" />
-      <change beforePath="$PROJECT_DIR$/414ThirdMaximumNumber.py" afterPath="$PROJECT_DIR$/414ThirdMaximumNumber.py" />
-      <change beforePath="$PROJECT_DIR$/Test.ipynb" afterPath="$PROJECT_DIR$/Test.ipynb" />
+      <change beforePath="$PROJECT_DIR$/438FindAllAnagramsInAString.py" afterPath="$PROJECT_DIR$/438FindAllAnagramsInAString.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,28 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="409LongestPalindrome.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/409LongestPalindrome.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="438FindAllAnagramsInAString.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/438FindAllAnagramsInAString.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,13 +30,14 @@
         <option value="$PROJECT_DIR$/202HappyNumber.py" />
         <option value="$PROJECT_DIR$/389FindTheDifference.py" />
         <option value="$PROJECT_DIR$/409LongestPalindrome.py" />
+        <option value="$PROJECT_DIR$/438FindAllAnagramsInAString.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="294" />
+    <option name="x" value="176" />
     <option name="y" value="23" />
-    <option name="width" value="881" />
+    <option name="width" value="943" />
     <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -152,10 +130,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="294" y="23" width="881" height="773" extended-state="0" />
-    <editor active="true" />
+    <frame x="176" y="23" width="943" height="773" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30752915" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -262,7 +239,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/409LongestPalindrome.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="369">
           <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
           <folding />
         </state>
@@ -270,8 +247,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/438FindAllAnagramsInAString.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="369">
+          <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
           <folding />
         </state>
       </provider>
