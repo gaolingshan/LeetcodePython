@@ -35,3 +35,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        res = [float('-inf'), float('-inf'), float('-inf')]
+        for number in nums:
+            if number not in res:
+                if number > res[0]:
+                    res = [number, res[0], res[1]]
+                elif number > res[1]:
+                    res = [res[0], number, res[1]]
+                elif number > res[2]:
+                    res = [res[0], res[1], number]
+        return max(res) if float('-inf') in res else res[2]

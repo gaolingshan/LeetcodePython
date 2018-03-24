@@ -16,10 +16,10 @@ The return format had been changed to zero-based indices. Please read the above 
 '''
 Remark: use a hashtable to save target-nums[i]. Hashtable search time is O(1).
 '''
-# Version 1:
+# Version 1: Hashtable
 
 
-class Solution(object):
+class Version1(object):
 
     def twoSum(self, nums, target):
         """
@@ -35,9 +35,9 @@ class Solution(object):
                 res_dict[(target - nums[i])] = i
 
 
-# Version 2:
+# Version 2: Hashtable with enumerate
 
-class Solution(object):
+class Version2(object):
     '''
     1. The use of "enumerate" in Python
     2. Omit "else"
@@ -47,10 +47,18 @@ class Solution(object):
         d = {}
         for i, num in enumerate(nums):
             if target - num in d:
-                return d[target - num] + 1, i + 1
+                return d[target - num], i
             d[num] = i
+
+# Version 3: Two pointer
+class Version3(object):
+    def twoSum(self, nums, target):
+        pass
 
 
 # Tests:
-aa = Solution()
-bb = print(aa.twoSum([1, 2, 7, 9], 10))
+aa = Version1()
+print(aa.twoSum([1, 2, 7, 9], 10))
+
+aa = Version2()
+print(aa.twoSum([1, 2, 7, 9], 10))
