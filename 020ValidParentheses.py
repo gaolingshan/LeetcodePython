@@ -9,8 +9,8 @@ The brackets must close in the correct order, "()" and "()[]{}" are all valid bu
 '''
 
 '''
-Remark:
-Use stack
+Tag: string, stack
+Thoughts:
 
 '''
 
@@ -22,28 +22,30 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        dic = {'(': ')', '[': ']', '{': '}'}
+        d = {'(': ')', '[': ']', '{': '}'}
         stack = []
         for char in s:
-            if char in dic.keys():
+            if char in d.keys():
                 stack.append(char)
             else:
-                if len(stack) == 0 or dic[stack[-1]] == char:
+                if len(stack) == 0 or d[stack[-1]] != char:
                     return False
                 else:
                     stack.pop()
         return stack == []
 
+
+
 a = Solution()
 b = a.isValid('{}()')
-print(b)
+assert b
 b = a.isValid('{()}')
-print(b)
+assert b
 b = a.isValid('(')
-print(b)
+assert b == False
 b = a.isValid('()')
-print(b)
+assert b
 b = a.isValid(']')
-print(b)
+assert b == False
 b = a.isValid('([)')
-print(b)
+assert b == False
