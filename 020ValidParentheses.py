@@ -1,5 +1,5 @@
 '''
-20. Valid Parenthese
+20. Valid Parentheses
 Difficulty: Easy
 
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -9,8 +9,16 @@ The brackets must close in the correct order, "()" and "()[]{}" are all valid bu
 '''
 
 '''
-Tag: string, stack
-Thoughts:
+Tag: string, stack, hashtable
+
+Thoughts: for each character in string, 
+if it is the first half of the  parentheses, append to list; 
+elif it is the second half, check if len(list) is 0, or list[-1] is not its 
+counterpart, then it is false;
+else pop the stack.
+
+if the final stack is empty (NOTE: use len(stack) == 0 rather than stack == [
+]. the former is faster), then the string is valid.
 
 '''
 
@@ -32,7 +40,7 @@ class Solution(object):
                     return False
                 else:
                     stack.pop()
-        return stack == []
+        return len(stack) == 0
 
 
 

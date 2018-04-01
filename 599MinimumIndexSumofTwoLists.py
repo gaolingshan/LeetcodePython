@@ -25,3 +25,40 @@ The index is starting from 0 to the list length minus 1.
 No duplicates in both lists.
 
 '''
+
+'''
+Tag: hashtable
+
+Thought: 
+1. create a hashtable to store list1 and its element indices.
+2. iterate list2, if element also in list1, check the sum of the indices
+3. If sum equal, append to result list, if smaller, then create a new list 
+with this restaurant name
+'''
+
+class Solution:
+    def findRestaurant(self, list1, list2):
+        """
+        :type list1: List[str]
+        :type list2: List[str]
+        :rtype: List[str]
+        """
+        d = {}
+        for i, rest in enumerate(list1):
+            d[rest] = i
+
+        max_sum = 2000 # given the length of both lists will be in the range
+        # in [1, 1000]
+        res = []
+
+        for i, rest in enumerate(list2):
+            if (rest in d) and (d[rest] + i < max_sum):
+                max_sum = d[rest] + i
+                res = [rest]
+            elif (rest in d) and (d[rest] + i == max_sum):
+                res.append(rest)
+
+        return res
+
+aa = Solution()
+print(aa.findRestaurant(["Shogun", "Tapioca Express", "Burger King", "KFC"], ["Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"]))

@@ -22,7 +22,10 @@ Tag: hashtable
 
 Thoughts:
 1. Create a dictionary with keys = unique employee IDs 
-and values = {importance, direct sub}
+and values = employee info
+2. Pass the dictionary to calcImportance
+3. Define a recursive calcImportance function to sum up the importance scores
+of subordinates
 '''
 
 
@@ -38,15 +41,16 @@ class Employee:
         # the id of direct subordinates
         self.subordinates = subordinates
 """
+
+# Version 1: Recursion
 class Solution:
 
-    def calcImportance(self, employees, d, id):
-        res = employees[d[id]].importance
-        for sub_id in employees[d[id]].subordinates:
-            res += employees[d[sub_id]].importance
-            self.getImportance(employees, sub_id)
-        return res
+    def calcImportance(self, id):
+        res = self.d[id].importance
 
+        for sub_id in self.d[id].subordinates:
+            res += self.calcImportance(sub_id)
+        return res
 
     def getImportance(self, employees, id):
         """
@@ -56,9 +60,41 @@ class Solution:
         """
         d = {}
         for i in range(len(employees)):
-            d[employees[i].id] = i
+            d[employees[i].id] = employees[i]
 
-        return self.calcImportance(employees, d, id)
+        self.d = d  # add dictionary to self
+        return self.calcImportance(id)
+
+# Version 2: While loop + stack
+class Solution():
+
+    def calcImportance(self, id):
+        res = self.d[id].importance
+
+        for sub_id in self.d[id].subordinates:
+            res += self.calcImportance(sub_id)
+        return res
+
+    def getImportance(self, employees, id):
+        """
+        :type employees: Employee list
+        :type id: int
+        :rtype: int
+        """
+        d = {}
+        for i in range(len(employees)):
+            d[employees[i].id] = employees[i]
+
+        res = d[id].importance
+        stack = d[id].subordinates
+
+        # while stack is not empty
+        while stack:
+            temp = stack.pop()
+            res += d[temp].importance
+            stack.extend(d[temp].subordinates)
+        return res
+
 
 aa = Solution()
 print(aa.getImportance([[1, 5, [2, 3]], [2, 3, []], [3, 3, []]], 1))
